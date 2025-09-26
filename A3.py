@@ -7,9 +7,21 @@ list=[]
 for j in range(n):
     a=float(input("enter the value of number:"))
     list.append(a)
+def maxi(list):
+    for i in range(len(list)):
+        for j in range(1,len(list)):
+            key=list[i]
+            if key<list[j]:
+                key=list[j]
+                i=j
+            else:
+                continue
+    return key
 
-print("maximun in list",max(list))
+
+print("maximun in list",maxi(list))
 print("minimum in list",min(list))
+
 i=0
 temp=0
 for i in range(len(list)):

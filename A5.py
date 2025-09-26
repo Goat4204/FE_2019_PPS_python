@@ -11,7 +11,6 @@ while(num>0):
     sum += (dig ** n)
     num=num//10
 
-print(sum,num,n)
 if(sum==num_og):
     print("number is armstrong number")
 else:

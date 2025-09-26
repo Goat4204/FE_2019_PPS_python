@@ -38,20 +38,17 @@ def prime(a):
             if(a%i==0):
                 return False
         return True
-def prime_factor(a):
-    x=[]
-    y=[]
-    for i in range(1,a+1):
-        if (a%i==0):
-            x.append(i)
+    
+def factor(a):
+    y = []
+    divisor = 2
+    while a > 1:
+        if a % divisor == 0:
+            y.append(divisor)
+            a=a// divisor
         else:
-            continue
-    for j in range(len(x)):
-        if prime(x[j]):
-            y.append(x[j])
-        else:
-            continue
-    return y
+            divisor += 1
+    print(y)
 
 def main():
     while True:
@@ -99,7 +96,7 @@ def main():
             else:
                 print("number is not prime")
         elif(ch==11):
-            print("prime factors are ",prime_factor(n))
+            factor(n)
         elif(ch==0):
             break
         else:
